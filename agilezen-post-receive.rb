@@ -16,7 +16,7 @@ post "/" do
   http.verify_mode = OpenSSL::SSL::VERIFY_NONE
 
   headers ={'X-Zen-ApiKey' => params[:api_key], 'Content-Type' => 'application/json'  }
-  task_id_regex = /(?:story|card|task) #?(\d+)/i
+  task_id_regex = /#(\d+)/i
   push = JSON.parse(params[:payload])
 
   return if push['base_ref']
