@@ -1,2 +1,2 @@
-require 'agilezen-post-receive.rb'
+require './agilezen-post-receive'
 run Sinatra::Application
