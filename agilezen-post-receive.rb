@@ -32,8 +32,7 @@ post "/" do
       end
       
       path = "https://agilezen.com/api/v1/projects/#{params[:board_id]}/stories/#{id}/comments"
-      puts path
-      puts http.post path,data, headers 
+      http.post path,data, headers 
     end
   end
   ""
