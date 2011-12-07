@@ -25,7 +25,7 @@ post "/" do
   commits_with_task.each do |commit|
     data = "{\"text\":\"#{comment_message_from commit }\"}"
     commit['message'].scan(task_id_regex).each do |story_id|
-      if story_id.kind_of(Array)
+      if story_id.kind_of?(Array)
         id = story_id[0]
       else
         id = story_id
