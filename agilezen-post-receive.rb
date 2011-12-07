@@ -26,7 +26,7 @@ post "/" do
     data = "{\"text\":\"#{comment_message_from commit }\"}"
     commit['message'].scan(task_id_regex).each do |story_id|
       path = "https://agilezen.com/api/v1/projects/#{params[:board_id]}/stories/#{story_id}/comments"
-      http.post path,data, headers 
+      puts http.post path,data, headers 
     end
   end
   ""
